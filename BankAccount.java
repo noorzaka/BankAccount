@@ -20,13 +20,13 @@ public class BankAccount {
             throw new IllegalArgumentException("Deposit amount must be positive.");
         }
     }
-    public void withdraw(double amount) {
-        if (amount > 0) {
-            this.balance -= amount;
+ public void withdraw(double amount) {
+        if (amount > balance) {
+            System.out.println("Insufficient funds");
         } else {
-            throw new IllegalArgumentException("Withdrawal amount must be positive.");
+            balance -= amount;
         }
-    }
+    }}
 
     public double getBalance() {
         return balance;
