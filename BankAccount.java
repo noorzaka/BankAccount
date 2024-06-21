@@ -7,6 +7,11 @@ public class BankAccount {
         this.accountHolder = accountHolder;
         this.balance = initialBalance;
     }
+    public BankAccount(String accountNumber) {
+        this.accountNumber = accountNumber;
+        this.balance = 0.0; // No initial balance
+    }
+
 
     public void deposit(double amount) {
         if (amount > 0) {
